@@ -1,0 +1,217 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+
+:root {
+  --bg-void: #12141c;
+  --bg-panel: #1b1f2e;
+  --bg-panel-raised: #232840;
+  --line: #333a52;
+
+  --parchment: #ece3d0;
+  --ink: #2b241c;
+
+  --text-primary: #e9e4d8;
+  --text-muted: #9691a6;
+
+  --ember: #e2763f;
+  --ember-soft: rgba(226, 118, 63, 0.15);
+  --teal: #4fa393;
+  --teal-soft: rgba(79, 163, 147, 0.15);
+  --violet: #9179c9;
+  --violet-soft: rgba(145, 121, 201, 0.15);
+
+  --radius: 10px;
+  --shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+body {
+  background: var(--bg-void);
+}
+
+.wrap {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  font-family: 'Inter', sans-serif;
+
+  color: var(--text-primary);
+
+
+}
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+}
+
+.top {
+  padding: 56px 0 40px;
+  border-bottom: 1px solid var(--line);
+  font-size: 30px;
+}
+
+
+
+.eyebrow {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ember);
+  background: var(--ember-soft);
+  border: 1px solid rgba(226, 118, 63, 0.35);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* mod一覧の四角い枠追加とネーム追加*/
+.origin-title{
+  background: #1b1f2e;
+  border: 1px solid #333a52;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+.origin-title:hover {
+  background: var(--bg-panel-raised);
+}
+
+/* 効果の説明　の設定*/
+.box1 {
+  list-style: none;
+  padding-left: 0; 
+  margin-top: 8px;
+  color: #9691a6;
+  font-size: 0.9rem;
+}
+
+
+
+
+
+
+.category-head {
+  border-bottom: 2px solid var(--line);
+  font-size: 30px;
+  padding: 3px 10px;
+  margin-bottom: 15px;
+  
+  font-weight: bold;
+}
+.category-block[data-accent="violet"] .category-head {border-bottom-color: var(--ember); }
+.category-block[data-accent="ember"] .category-head { border-bottom-color: var(--ember); }
+
+.mixed {list-style: none;}
+.good{list-style: none;}
+.bad{list-style: none;}
+.good li::before { content: "＋ "; color: #4fa393;list-style: none;}
+.bad li::before { content: "－ "; color: #e73111; }
+.mixed li::before {content: "± ";color: #9179c9;}
+
+.box0{
+  color: var(--ink);
+  background: var(--parchment);
+  border: 1px solid var(--bg-void);
+  border-radius: 8px;
+  padding: 16px 20px;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+
+.boxA:hover{
+  background: rgba(54, 46, 36, 0);
+}
+.boxA{
+  
+  background: rgba(43, 36, 28, 0.05);
+  border-left: 3px solid var(--ember);
+  border: 1px solid rgba(43, 36, 28, 0.15);
+  border-radius: 8px;
+  padding: 8px 8px;
+
+  margin-top: 8px;
+
+  color: var(--ink);
+  font-size: 0.9rem;
+  
+  
+}
+
+.boxB{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+}
+
+.title-size{
+  font-size :20px;
+  font-weight: bold;
+  
+}
+
+.card{
+  background: rgba(226, 118, 63, 0.12);
+  border-left: 3px solid var(--ember);
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 0.92rem;
+  margin: 1.4em 0;
+}
+
+.defence{
+  list-style: none;
+  padding: 0;
+  width: 100px;          /* ラベル文字の幅を揃える */
+  flex-shrink: 0; 
+}
+
+.recipe-card {
+  background: var(--bg-panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 28px;
+  margin-bottom: 22px;
+}
+.crafting-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  width: 168px;
+}
+.craft-slot {
+  width: 52px;
+  height: 52px;
+  background: var(--bg-void);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.68rem;
+  text-align: center;
+  color: var(--text-muted);
+  padding: 2px;
+}
+.craft-slot.filled { border-color: var(--teal); color: var(--text-primary); background: var(--teal-soft); }
+.craft-slot.result-arrow { border: none; background: none; font-size: 1.3rem; color: var(--ember); }
+
+.recipe-info h3 { font-size: 1.05rem; margin-bottom: 6px; }
+.recipe-info p { color: var(--text-muted); font-size: 0.92rem; margin: 0 0 8px; }
