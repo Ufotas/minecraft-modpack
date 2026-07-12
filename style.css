@@ -71,39 +71,6 @@ body {
 
 
 
-
-
-
-
-
-
-/* mod一覧の四角い枠追加とネーム追加*/
-.origin-title{
-  background: #1b1f2e;
-  border: 1px solid #333a52;
-  border-radius: 8px;
-  padding: 16px 20px;
-  margin-bottom: 12px;
-  font-weight: bold;
-}
-.origin-title:hover {
-  background: var(--bg-panel-raised);
-}
-
-/* 効果の説明　の設定*/
-.box1 {
-  list-style: none;
-  padding-left: 0; 
-  margin-top: 8px;
-  color: #9691a6;
-  font-size: 0.9rem;
-}
-
-
-
-
-
-
 .category-head {
   border-bottom: 2px solid var(--line);
   font-size: 30px;
@@ -130,11 +97,17 @@ body {
   padding: 16px 20px;
   font-size: 1.2rem;
   margin-bottom: 10px;
+
+
+
+
+
+
 }
 
 
 .boxA:hover{
-  background: rgba(54, 46, 36, 0);
+  background: rgba(187, 201, 202, 0.726);
 }
 .boxA{
   
@@ -143,20 +116,19 @@ body {
   border: 1px solid rgba(43, 36, 28, 0.15);
   border-radius: 8px;
   padding: 8px 8px;
-
+  align-items: center;
   margin-top: 8px;
 
   color: var(--ink);
   font-size: 0.9rem;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   
   
 }
 
-.boxB{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  
-}
+
 
 .title-size{
   font-size :20px;
